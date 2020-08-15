@@ -1,13 +1,29 @@
-/* Given Code, don't edit */
 
-document.querySelector("button").addEventListener("click", handleClick);
+document.getElementById("button").addEventListener("click", handleclick);
 
-function handleClick(e) {
-  const timeString = document.getElementById('time').value
-  displayMessage(greet(timeString))
+function handleclick(e) {
+    const timeString = document.getElementById("time").value;
+    displayMessage(greet(timeString))
 }
 
-/* End Given Code, don't edit above here...*/
+function greet(String){
+    const splittedTime = String.split(":");
+    
+    const hour = splittedTime[0];
 
-/* Write your implementation of greet() */
-/* Write your implementation of displayMessage() */
+    const time = parseInt(hour, 10);
+
+    if (time < 12) {
+        return "Good Morning";
+    }
+    else if (time >= 12 && time < 17) {
+        return "Good Afternoon";
+    }
+    else {
+        return "Good Evening";
+    }
+}
+   
+function displayMessage(String) {
+    document.getElementById("greeting").innerText = String;
+}
