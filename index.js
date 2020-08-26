@@ -30,5 +30,3 @@ function displayMessage(anyarg) {
 }
 displayMessage(greet(timeString));
 
-/* Write your implementation of greet() */
-/* Write your implementation of displayMessage()
